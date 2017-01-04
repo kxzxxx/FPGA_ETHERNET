@@ -87,7 +87,7 @@
 		id="PlayerTech_ProductionBonus_Allies"
 		TechPointsRequired="1">
 		<TechDependency>PlayerTech_Allied_ChronoRift_Rank3</TechDependency>
-		<!--<TechDependency>PlayerTech_Generic_Rank_5</TechDependency>-->
+		<TechDependency>PlayerTech_Generic_Rank_5</TechDependency>
 	</PlayerTech>
 	<PlayerTech
 		id="PlayerTech_Allied_CryoSatellite_Rank3"
@@ -184,7 +184,7 @@
 	<PlayerTech
 		id="PlayerTech_ProductionBonus_Japan"
 		TechPointsRequired="1">
-		<!--<TechDependency>PlayerTech_Japan_EmperorsRage_Rank3</TechDependency>-->
+		<TechDependency>PlayerTech_Japan_EmperorsRage_Rank3</TechDependency>
 		<TechDependency>PlayerTech_Generic_Rank_5</TechDependency>
 	</PlayerTech>
 	<PlayerTech
@@ -282,7 +282,7 @@
 	<PlayerTech
 		id="PlayerTech_ProductionBonus_Soviet"
 		TechPointsRequired="1">
-		<!--<TechDependency>PlayerTech_Soviet_DesolatorBomb_Rank3</TechDependency>-->
+		<TechDependency>PlayerTech_Soviet_DesolatorBomb_Rank3</TechDependency>
 		<TechDependency>PlayerTech_Generic_Rank_5</TechDependency>
 	</PlayerTech>
 	<PlayerTech

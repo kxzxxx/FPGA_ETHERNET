@@ -6,9 +6,6 @@
 		<Include type="instance" source="DATA:SageXml/System/PlayerSpellBook.xml"/>
 	</Includes>
 	
-
-
-	
 	<GameObject
 		id="PlayerSpellBook"
 		inheritFrom="PlayerSpellBook">

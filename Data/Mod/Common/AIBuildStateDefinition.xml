@@ -125,7 +125,7 @@
 		<BuildEntry Build="AlliedSupportAircraft" Heuristic="RANDOM_UNIT" PercentLow="20" PercentHigh="40"/>
 		<BuildEntry Build="AlliedAntiGroundAircraft" Heuristic="RANDOM_UNIT" PercentLow="40" PercentHigh="60"/>
 		<BuildEntry Build="AlliedBomberAircraft" Heuristic="RANDOM_UNIT" PercentLow="60" PercentHigh="80"/>
-		<BuildEntry Build="AlliedGunshipAircraft" Heuristic="RANDOM_UNIT" PercentLow="40" PercentHigh="70"/>
+		<BuildEntry Build="AlliedGunshipAircraft" Heuristic="RANDOM_UNIT" PercentLow="80" PercentHigh="100"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition
@@ -341,7 +341,7 @@
 		<BuildEntry Build="JapanAntiAirShip" Heuristic="RANDOM_UNIT" PercentLow="34" PercentHigh="52"/>
 		<BuildEntry Build="JapanAntiVehicleShip" Heuristic="RANDOM_UNIT" PercentLow="52" PercentHigh="68"/>
 		<BuildEntry Build="JapanAntiStructureShip" Heuristic="RANDOM_UNIT" PercentLow="68" PercentHigh="84"/>
-		<BuildEntry Build="JapanFortressShipEgg" Heuristic="RANDOM_UNIT" PercentLow="33" PercentHigh="60"/>
+		<BuildEntry Build="JapanFortressShipEgg" Heuristic="RANDOM_UNIT" PercentLow="84" PercentHigh="100"/>
 	</AIBuildStateDefinition>
 	
 	<AIBuildStateDefinition

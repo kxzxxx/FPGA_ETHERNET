@@ -9,8 +9,5 @@
 		<Include type="all" source="Structures/Castle Square.xml" />
 		<Include type="all" source="Structures/Castle Tower.xml" />
 		<Include type="all" source="Structures/Castle Wall.xml" />
-		
-		<Include type="all" source="Structures/OilDerrick.xml" />
-	<Include type="all" source="Structures/OilDerrick_OnWater.xml" />
 	</Includes>
 </AssetDeclaration>

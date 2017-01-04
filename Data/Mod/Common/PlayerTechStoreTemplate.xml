@@ -9,24 +9,24 @@
 			<Button>Purchase_PlayerTech_Allied_HighTechnology</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Allied_PrecisionStrike</Button>
+			<Button>Purchase_PlayerTech_Allied_ChronoRift_Rank1</Button>
 			<Button>Purchase_PlayerTech_Allied_ChronoSwap</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Allied_TimeBomb_Rank1</Button>
+			<Button>Purchase_PlayerTech_Allied_ChronoRift_Rank2</Button>
+			<Button>Purchase_PlayerTech_Allied_CryoSatellite_Rank1</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Allied_TimeBomb_Rank2</Button>
+			<Button>Purchase_PlayerTech_Allied_ChronoRift_Rank3</Button>
+			<Button>Purchase_PlayerTech_Allied_CryoSatellite_Rank2</Button>
 		</Row>
 		<Row>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Allied_TimeBomb_Rank3</Button>
 			<Button>Purchase_PlayerTech_ProductionBonus_Allies</Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Allied_CryoSatellite_Rank3</Button>
 		</Row>
 	</PlayerTechStoreTemplate>
 	
@@ -40,23 +40,23 @@
 		</Row>
 		<Row>
 			<Button>Purchase_PlayerTech_Japan_PointDefenseDrones</Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Japan_EmperorsRage_Rank1</Button>
+			<Button>Purchase_PlayerTech_Japan_Ambush</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Japan_FinalSquadron_Rank1</Button>
+			<Button>Purchase_PlayerTech_Japan_EmperorsRage_Rank2</Button>
+			<Button>Purchase_PlayerTech_Japan_BalloonAttack_Rank1</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Japan_FinalSquadron_Rank2</Button>
+			<Button>Purchase_PlayerTech_Japan_EmperorsRage_Rank3</Button>
+			<Button>Purchase_PlayerTech_Japan_BalloonAttack_Rank2</Button>
 		</Row>
 		<Row>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Japan_FinalSquadron_Rank3</Button>
 			<Button>Purchase_PlayerTech_ProductionBonus_Japan</Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Japan_BalloonAttack_Rank3</Button>
 		</Row>
 	</PlayerTechStoreTemplate>
 	
@@ -69,24 +69,24 @@
 			<Button>Purchase_PlayerTech_Soviet_CrushPuppies</Button>
 		</Row>
 		<Row>
-			<Button></Button>		
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Soviet_IrradiateTarget</Button>		
+			<Button>Purchase_PlayerTech_Soviet_DesolatorBomb_Rank1</Button>
+			<Button>Purchase_PlayerTech_Soviet_MagneticSatellite_Rank_1</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Soviet_OrbitalRefuse_Rank1</Button>
+			<Button>Purchase_PlayerTech_Soviet_DesolatorBomb_Rank2</Button>
+			<Button>Purchase_PlayerTech_Soviet_MagneticSatellite_Rank_2</Button>
 		</Row>
 		<Row>
-			<Button></Button>
-			<Button></Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Soviet_OrbitalRefuse_Rank2</Button>
+			<Button>Purchase_PlayerTech_Soviet_DesolatorBomb_Rank3</Button>
+			<Button>Purchase_PlayerTech_Soviet_MagneticSatellite_Rank_3</Button>
 		</Row>
 		<Row>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Soviet_OrbitalRefuse_Rank3</Button>
 			<Button>Purchase_PlayerTech_ProductionBonus_Soviet</Button>
-			<Button></Button>
+			<Button>Purchase_PlayerTech_Soviet_MagneticSingularity</Button>
 		</Row>
 	</PlayerTechStoreTemplate>
 </AssetDeclaration>

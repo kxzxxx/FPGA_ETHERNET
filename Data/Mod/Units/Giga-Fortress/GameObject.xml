@@ -2023,7 +2023,7 @@
 			<NeededUpgrade>Upgrade_JapanNavalYardTech3</NeededUpgrade>
 		</GameDependency>		
 		<ObjectResourceInfo>
-			<BuildCost Account="0" Amount="8000"/>
+			<BuildCost Account="0" Amount="6300"/>
 		</ObjectResourceInfo>
 		<ArmorSet
 			Armor="JapanFortressShipArmor"
