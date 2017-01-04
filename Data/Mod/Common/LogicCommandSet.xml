@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	
+		<SpecialPowerTemplate
+		id="SpecialPowerCaptureControlPoint_my"
+		TargetType="OBJECT"
+		Flags="NEEDS_OBJECT_FILTER"
+		WaypointModeTerminal="false">
+		<ObjectFilter
+			Rule="ANY"
+			Include="STRUCTURE" />
+	</SpecialPowerTemplate>
+	
+		<LogicCommand
+		Type="GARRISON_BUILDING"
+		id="Command_CaptureBuilding_1">
+		<SpecialPower>SpecialPowerCaptureControlPoint_my</SpecialPower>
+		<AISpecialPowerInfo Heuristic="CAPTURE" Manager="TACTIC">
+			<ObjectFilter Rule="ANY" Relationship="NEUTRAL ENEMIES ALLIES" Include="HUSK STRUCTURE" Exclude="CIVILIAN_BUILDING"/>
+		</AISpecialPowerInfo>
+	</LogicCommand>
+	
+		<LogicCommandSet
+		id="AlliedEngineerCommandSet">
+	
+		
+		<Cmd>Command_MoveToPositionAndCollect</Cmd>
+	</LogicCommandSet>
+	
+	
+<LogicCommandSet
+		id="AlliedConstructionYardCommandSetBase">
+    <Cmd>Command_ConstructAlliedPowerPlant</Cmd>
+    <Cmd>Command_ConstructAlliedBarracks</Cmd>
+		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
+		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
+		<Cmd>Command_ConstructAlliedAirfield</Cmd>
+		<Cmd>Command_ConstructAlliedTechStructure</Cmd>
+		
+		<Cmd>Command_ConstructAlliedWall</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefense</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefenseAdvanced</Cmd>
+				<Cmd>Command_ConstructAlliedSuperWeapon</Cmd>
+		<Cmd>Command_PackAlliedMCV</Cmd>
+<!--		
+		<Cmd>Command_UpgradeAlliedCrane</Cmd>
+		<Cmd>Command_UpgradeAlliedRadarDish</Cmd>
+		<Cmd>Command_UpgradeAlliedConstructionYardRepairBay</Cmd>
+-->	
+	</LogicCommandSet>
+		<LogicCommandSet
+		id="AlliedConstructionYardCommandSet">
+		    <Cmd>Command_ConstructAlliedPowerPlant</Cmd>
+    <Cmd>Command_ConstructAlliedBarracks</Cmd>
+		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
+		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
+		<Cmd>Command_ConstructAlliedAirfield</Cmd>
+		<Cmd>Command_ConstructAlliedTechStructure</Cmd>
+		<Cmd>Command_ConstructAlliedWall</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefense</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefenseAdvanced</Cmd>
+		<Cmd>Command_PackAlliedMCV</Cmd>
+				<Cmd>Command_ConstructAlliedSuperWeapon</Cmd>
+		<Cmd>Command_PurchaseAlliedTech2</Cmd>
+	</LogicCommandSet>
+	<LogicCommandSet
+		id="AlliedConstructionYardCommandSetLevel2">
+		    <Cmd>Command_ConstructAlliedPowerPlant</Cmd>
+    <Cmd>Command_ConstructAlliedBarracks</Cmd>
+		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
+		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
+		<Cmd>Command_ConstructAlliedAirfield</Cmd>
+		<Cmd>Command_ConstructAlliedTechStructure</Cmd>
+		<Cmd>Command_ConstructAlliedWall</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefense</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefenseAdvanced</Cmd>
+		<Cmd>Command_PackAlliedMCV</Cmd>
+				<Cmd>Command_ConstructAlliedSuperWeapon</Cmd>
+		<Cmd>Command_PurchaseAlliedTech3</Cmd>
+	</LogicCommandSet>
+
+	
+	<LogicCommandSet
+		id="AlliedCraneCommandSet">
+		<Cmd>Command_ConstructAlliedPowerPlant</Cmd>
+		<Cmd>Command_ConstructAlliedRefinery</Cmd>
+		<Cmd>Command_ConstructAlliedTechStructure</Cmd>
+		<Cmd>Command_ConstructAlliedBarracks</Cmd>
+		<Cmd>Command_ConstructAlliedWarFactory</Cmd>
+		<Cmd>Command_ConstructAlliedAirfield</Cmd>
+		<Cmd>Command_ConstructAlliedNavalYard</Cmd>
+		<Cmd>Command_ConstructAlliedSuperWeapon</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefense</Cmd>
+		<Cmd>Command_ConstructAlliedBaseDefenseAdvanced</Cmd>
+		<Cmd>Command_ConstructAlliedOutpost</Cmd>
+	</LogicCommandSet>
+
+
+	<!-- Soviet -->
+
+	<LogicCommandSet
+		id="SovietConstructionYardCommandSet">
+		<Cmd>Command_ConstructSovietWall</Cmd>
+    <Cmd>Command_ConstructSovietPowerPlant</Cmd>
+    <Cmd>Command_ConstructSovietBarracks</Cmd>
+		<Cmd>Command_ConstructSovietRefinery</Cmd>
+		<Cmd>Command_ConstructSovietWarFactory</Cmd>
+		<Cmd>Command_ConstructSovietNavalYard</Cmd>
+		<Cmd>Command_ConstructSovietAirfield</Cmd>
+		<Cmd>Command_ConstructSovietPowerPlantAdvanced</Cmd>
+		<Cmd>Command_ConstructSovietTechStructure</Cmd>
+		<Cmd>Command_ConstructSovietBaseDefenseGround</Cmd>
+		<Cmd>Command_ConstructSovietBaseDefenseAir</Cmd>
+		<Cmd>Command_ConstructSovietBaseDefenseAdvanced</Cmd>	
+		<Cmd>Command_ConstructSovietCrane</Cmd>	
+		<Cmd>Command_PackSovietMCV</Cmd>  
+		<Cmd>Command_ConstructSovietSuperWeapon</Cmd>
+<!--
+		<Cmd>Command_UpgradeSovietCrane</Cmd>
+		<Cmd>Command_UpgradeSovietRadarDish</Cmd>
+		<Cmd>Command_UpgradeSovietConstructionYardSalvageYard</Cmd>
+-->		
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="SovietCraneCommandSet">
+		<Cmd>Command_ConstructSovietWall</Cmd>
+		<Cmd>Command_ConstructSovietPowerPlant</Cmd>
+		<Cmd>Command_ConstructSovietBarracks</Cmd>
+		<Cmd>Command_ConstructSovietRefinery</Cmd>
+		<Cmd>Command_ConstructSovietWarFactory</Cmd>
+		<Cmd>Command_ConstructSovietNavalYard</Cmd>
+		<Cmd>Command_ConstructSovietAirfield</Cmd>
+		<Cmd>Command_ConstructSovietPowerPlantAdvanced</Cmd>
+		<Cmd>Command_ConstructSovietTechStructure</Cmd>
+		<Cmd>Command_ConstructSovietBaseDefenseGround</Cmd>
+		<Cmd>Command_ConstructSovietBaseDefenseAir</Cmd>
+		<Cmd>Command_ConstructSovietBaseDefenseAdvanced</Cmd>
+		<Cmd>Command_ConstructSovietSuperWeapon</Cmd>
+	</LogicCommandSet>
+
+	<LogicCommandSet
+		id="JapanConstructionYardCommandSet">
+		<Cmd>Command_ConstructJapanWall</Cmd>
+    <Cmd>Command_ConstructJapanPowerPlantEgg</Cmd>
+    <Cmd>Command_ConstructJapanBarracksEgg</Cmd>
+		<Cmd>Command_ConstructJapanRefineryEgg</Cmd>
+		<Cmd>Command_ConstructJapanWarFactoryEgg</Cmd>
+		<Cmd>Command_ConstructJapanNavalYardEgg</Cmd>
+		<Cmd>Command_ConstructJapanTechStructureEgg</Cmd>
+		<Cmd>Command_ConstructJapanBaseDefenseEgg</Cmd>		
+		<Cmd>Command_ConstructJapanBaseDefenseAdvancedEgg</Cmd>
+		<Cmd>Command_ConstructJapanSuperWeaponEgg</Cmd>
+<!--		
+		<Cmd>Command_UpgradeJapanRadarDish</Cmd>
+		<Cmd>Command_UpgradeJapanRepairBay</Cmd>
+-->		
+		<Cmd>Command_PackJapanMCV</Cmd>	
+	</LogicCommandSet>
+  
+	
+	<LogicCommandSet
+		id="PlayerSpellBookCommandSet">
+		<!-- Allies Powers -->
+		<Cmd>Command_SelectObjectsForChrono</Cmd>
+		<Cmd>Command_SpawnObjectsForChrono</Cmd>		
+		<Cmd>Command_ChronoSwapSelect</Cmd>
+   
+		<Cmd>Command_PrecisionStrike</Cmd>
+		<Cmd>Command_SatelliteSweep</Cmd>
+		<Cmd>Command_HighTechnology</Cmd>
+		<Cmd>Command_AirPower</Cmd>
+		
+		<!-- Soviet Powers -->
+		<Cmd>Command_IronCurtain</Cmd>
+	
+		<Cmd>Command_MagneticSingularity</Cmd>
+
+		<Cmd>Command_TerrorDroneEggs</Cmd>
+		<Cmd>Command_CrushPuppiesPower</Cmd>
+		<Cmd>Command_ProductionKickbacks</Cmd>
+		<Cmd>Command_IrradiateTarget</Cmd>
+		
+		<!-- Japan Powers -->
+		
+	
+		<Cmd>Command_NanoSwarmHive</Cmd>
+		<Cmd>Command_JapanEnhancedKamikaze</Cmd>
+		<Cmd>Command_PointDefenseDrones</Cmd>
+		<Cmd>Command_JapanNavalPower</Cmd>
+		<Cmd>Command_JapanAdvancedMissilePacks</Cmd>
+		<Cmd>Command_JapanRoboticAssembly</Cmd>
+		<Cmd>Command_JapanAmbush</Cmd>
+
+	</LogicCommandSet>
+
+
+  
+
+	<LogicCommandSet
+		id="AlliedAirfieldCommandSet">
+		<Cmd>Command_ConstructAlliedAntiGroundAircraft</Cmd>
+		<Cmd>Command_ConstructAlliedFighterAircraft</Cmd>
+		<Cmd>Command_ConstructAlliedSupportAircraft</Cmd>
+		<Cmd>Command_ConstructAlliedBomberAircraft</Cmd>
+		<Cmd>Command_AlliedRecallAllAircraft</Cmd>
+		<Cmd>Command_ConstructAlliedGunshipAircraft</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="AlliedBarracksCommandSet">
+		<Cmd>Command_ConstructAlliedScoutInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedAntiInfantryInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedAntiVehicleInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedEngineer</Cmd>
+		<Cmd>Command_ConstructAlliedInfiltrationInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedLegionnaireInfantry</Cmd>
+		<Cmd>Command_ConstructAlliedCommandoTech1</Cmd>
+	</LogicCommandSet>	
+	
+	<LogicCommandSet
+		id="AlliedWarFactoryCommandSet">
+		<Cmd>Command_ConstructAlliedMiner</Cmd>
+		<Cmd>Command_ConstructAlliedAntiInfantryVehicle_Ground</Cmd>
+		<Cmd>Command_ConstructAlliedAntiAirVehicleTech1</Cmd>
+		<Cmd>Command_ConstructAlliedAntiVehicleVehicleTech1</Cmd>
+		<Cmd>Command_ConstructAlliedAntiStructureVehicle</Cmd>
+		<Cmd>Command_ConstructAlliedAntiVehicleVehicleTech3</Cmd>
+		<Cmd>Command_ConstructAlliedArtilleryVehicle</Cmd>
+		<Cmd>Command_ConstructAlliedFutureTank</Cmd>
+		<Cmd>Command_ConstructAlliedMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanBarracksCommandSetBase">
+		<Cmd>Command_ConstructJapanScoutInfantry</Cmd>
+		<Cmd>Command_ConstructJapanAntiInfantryInfantry</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleInfantry</Cmd>
+		<Cmd>Command_ConstructJapanEngineer</Cmd>
+		<Cmd>Command_ConstructJapanArcherInfantry</Cmd>
+		<Cmd>Command_ConstructJapanInfiltrationInfantry</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleInfantryTech3</Cmd>
+		<Cmd>Command_ConstructJapanCommandoTech1</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanBarracksCommandSet"
+		inheritFrom="JapanBarracksCommandSetBase">
+		<Cmd>Command_PurchaseJapanBarracksTech2</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanBarracksCommandSetTech2"
+		inheritFrom="JapanBarracksCommandSetBase">
+		<Cmd>Command_PurchaseJapanBarracksTech3</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanNavalYardCommandSetBase">
+		<Cmd>Command_ConstructJapanMiner_Naval</Cmd>
+		<Cmd>Command_ConstructJapanNavyScoutShip</Cmd>	
+		<Cmd>Command_ConstructJapanAntiVehicleVehicleTech1_Naval</Cmd>
+		<Cmd>Command_ConstructJapanAntiAirShip</Cmd>	
+		<Cmd>Command_ConstructJapanAntiVehicleShip</Cmd>
+		<Cmd>Command_ConstructJapanAntiStructureShip</Cmd>
+		<Cmd>Command_ConstructJapanFortressShipEgg</Cmd>
+		<Cmd>Command_ConstructJapanMCV_Naval</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanNavalYardCommandSet"
+		inheritFrom="JapanNavalYardCommandSetBase">
+		<Cmd>Command_PurchaseJapanNavalYardTech2</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanNavalYardCommandSetTech2"
+		inheritFrom="JapanNavalYardCommandSetBase">
+		<Cmd>Command_PurchaseJapanNavalYardTech3</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanWarFactoryCommandSetBase">
+		<Cmd>Command_ConstructJapanMiner</Cmd>
+		<Cmd>Command_ConstructJapanLightTransportVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiInfantryVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleVehicleTech1</Cmd>
+		<Cmd>Command_ConstructJapanAntiAirVehicleTech1</Cmd>
+		<Cmd>Command_ConstructJapanSentinelVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiStructureVehicle</Cmd>
+		<Cmd>Command_ConstructJapanAntiVehicleVehicleTech3</Cmd>
+		<Cmd>Command_ConstructJapanMCV</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanWarFactoryCommandSet"
+		inheritFrom="JapanWarFactoryCommandSetBase">
+		<Cmd>Command_PurchaseJapanWarFactoryTech2</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="JapanWarFactoryCommandSetTech2"
+		inheritFrom="JapanWarFactoryCommandSetBase">
+		<Cmd>Command_PurchaseJapanWarFactoryTech3</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="SovietBarracksCommandSet">
+		<Cmd>Command_ConstructSovietScoutInfantry</Cmd>
+		<Cmd>Command_ConstructSovietAntiInfantryInfantry</Cmd>
+		<Cmd>Command_ConstructSovietAntiVehicleInfantry</Cmd>
+		<Cmd>Command_ConstructSovietEngineer</Cmd>
+		<Cmd>Command_ConstructSovietMortarcycle</Cmd>
+		<Cmd>Command_ConstructSovietHeavyAntiVehicleInfantry</Cmd>
+		<Cmd>Command_ConstructSovietDesolatorInfantry</Cmd>
+		<Cmd>Command_ConstructSovietCommandoTech1</Cmd>
+	</LogicCommandSet>
+	
+	<LogicCommandSet
+		id="SovietWarFactoryCommandSet">
+		<Cmd>Command_ConstructSovietMiner</Cmd>
+		<Cmd>Command_ConstructSovietSurveyor</Cmd>
+		<Cmd>Command_ConstructSovietScoutVehicle</Cmd>
+		<Cmd>Command_ConstructSovietAntiInfantryVehicle</Cmd>
+		<Cmd>Command_ConstructSovietAntiAirShip_Ground</Cmd>
+		<Cmd>Command_ConstructSovietHeavyWalkerVehicle</Cmd>
+		<Cmd>Command_ConstructSovietAntiVehicleVehicleTech1</Cmd>
+		<Cmd>Command_ConstructSovietGrinderVehicle</Cmd>
+		<Cmd>Command_ConstructSovietAntiStructureVehicle</Cmd>
+		<Cmd>Command_ConstructSovietAntiVehicleVehicleTech3</Cmd>
+		<Cmd>Command_ConstructSovietMCV</Cmd>
+		<Cmd>Command_RepairVehicle</Cmd>
+	</LogicCommandSet>
+</AssetDeclaration>

@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+
+	
+		<WeaponTemplate
+		id="SovietScoutVehicleMeleeAttachWeapon"
+		AttackRange="25.0"
+		ChaseWeapon="true"
+		WeaponSpeed="999999.0"
+		ReAcquireDetailType="PRE_FIRE"
+		ClipSize="1"
+		VirtualDamage="SHARE"
+		FireFX="FX_TerrorGoInside"
+    FireVeteranFX="FX_TerrorGoInside"
+		AcceptableAimDelta="10d"
+		CanFireWhileMoving="true"
+        Flags="NOT_ATTRACTED_BY_MAGNETS" 
+		RequiredAntiMask="ANTI_VEHICLE"
+		ForbiddenAntiMask="ANTI_AIRBORNE_VEHICLE"
+		MeleeWeapon="true">
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<ClipReloadTime
+			MinSeconds="0.1s"
+			MaxSeconds="0.1s" />
+		<Nuggets>
+			<AttachNugget
+							AttachModuleId="ModuleTag_AttachUpdate"
+				ForbiddenTargetObjectStatus="AIRBORNE_TARGET VEHICLE_ATTACHED UNDERGOING_REPAIR SPECIAL_ARMOR_ACTIVE UNDER_IRON_CURTAIN NOT_IN_WORLD">
+
+			<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE"
+					Exclude="INFANTRY"
+					Relationship="ENEMIES NEUTRAL">
+					<ExcludeThing>SovietScoutVehicle</ExcludeThing>
+									<ExcludeThing>AlliedMCV</ExcludeThing>
+					<ExcludeThing>SovietMCV</ExcludeThing>
+					<ExcludeThing>JapanMCV</ExcludeThing>	
+				</SpecialObjectFilter>
+			</AttachNugget>
+		</Nuggets>
+	</WeaponTemplate>
+<WeaponTemplate
+		id="SovietFighterAircraftFlakMissile"
+		AttackRange="200.0"
+		MinimumAttackRange="10"
+		WeaponSpeed="500"
+		AcceptableAimDelta="20d"
+		PreAttackType="PER_SHOT"
+		ClipSize="8"
+		AutoReloadsClip="AUTO"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		FireSound="SOV_MigFighter_MissileFire"
+		FireFX="FX_SovietMigMissilesFire"
+		FireVeteranFX="FX_SovietMigMissilesFire_Vet"
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY"
+		CanFireWhileMoving="true"
+		InstantLoadClipOnActivate="true"
+		VirtualDamage="SHARE"
+ 		>
+<!--
+		SingleAmmoReloadedNotFullSound="GDI_FireHawk_AmmoLoadOne"
+		ClipReloadedSound="GDI_FireHawk_AmmoReloaded"
+-->
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<ClipReloadTime
+			MinSeconds="5s"
+			MaxSeconds="5s" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="SovietFighterAircraftFlakMissileWarhead"
+				ProjectileTemplate="SovietFighterAircraftFlakMissileProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietFighterAircraftFlakMissileProjectile_Veteran"/>
+			</ProjectileNugget>
+			<InformTargetNugget />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	
+	<WeaponTemplate
+		id="Leech_FlakMissile"
+		inheritFrom="SovietFighterAircraftFlakMissile"
+		ForbiddenFiringObjectStatus=""/>
+
+
+<WeaponTemplate
+		id="AlliedFighterAircraftCannon"
+		FireSound="ALL_Apollo_WeaponFire"
+		FireFX="FX_Allied_FighterFire"
+		FireVeteranFX="FX_Allied_FighterFire_Vet"
+		AttackRange="200.0"
+		MinimumAttackRange="10"
+		AcceptableAimDelta="10d"
+		RequiredAntiMask="ANTI_AIRBORNE_VEHICLE ANTI_AIRBORNE_INFANTRY ANTI_PARACHUTE"
+		CanFireWhileMoving="true"
+		ClipSize="45"
+		Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+		AutoReloadsClip="AUTO"
+		InstantLoadClipOnActivate="true" 
+		ReAcquireDetailType="PER_CLIP">
+		<FiringDuration
+			MinSeconds="0.2s"
+			MaxSeconds="0.2s" />
+		<ClipReloadTime
+			MinSeconds="5s"
+			MaxSeconds="5s" />
+		<Nuggets>
+      <DamageNugget
+        id="DefaultDamageNugget"
+				Damage="20.0"
+				DamageType="AUTO_CANNON"
+				DelayTimeSeconds="0.1s"
+				DamageFXType="ALLIED_FIGHTER"
+				DeathType="NORMAL">
+			<DamageScalarDetails Scalar= "50%">
+					<Filter
+					Rule="NONE">
+						<IncludeThing>SovietFighterAircraft</IncludeThing>
+						<IncludeThing>AlliedFighterAircraft</IncludeThing>
+					</Filter>		
+					</DamageScalarDetails>
+			</DamageNugget>	
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="AlliedFighterAircraftCannon_Veteran"
+		inheritFrom="AlliedFighterAircraftCannon"/>
+
+
+
+
+
+
+
+	<WeaponTemplate
+		id="PlayerPowerPointDefenseDronesWeapon"
+		AttackRange="999999"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_GROUND ANTI_WATER"
+		RadiusDamageAffects="ALLIES">
+		<PreAttackDelay
+			MinSeconds="0.0s"
+			MaxSeconds="0.0s" />
+		<Nuggets>
+			<FireOnObjectsNugget
+				Radius="100.0"
+				FireOnVictimObject="true"
+				PartitionFilterTestType="CIRCLE"
+				Weapon="PlayerPowerPointDefenseDronesWeapon_Individual">
+				<!-- this objfilter must be the same as the one in the SpecialPower_PointDefenseDrones special power template -->
+				<Filter
+					Rule="ANY"
+					Relationship="ALLIES"
+					Include="VEHICLE HUGE_VEHICLE SHIP"
+					Exclude="INFANTRY AIRCRAFT SUBMARINE"
+					StatusBitFlagsExclude="SUBMERGED AIRBORNE_TARGET IN_NANOHIVE NOT_IN_WORLD POINT_DEFENSE_DRONE_ATTACHED">
+					<ExcludeThing>JapanPointDefenseDrone</ExcludeThing>
+				</Filter>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- player power weapons for Emperor's Rage (resolve) level 1. -->
+    <WeaponTemplate
+		id="PlayerPowerJapanEmperorsResolveWeapon_L1"
+		AttackRange="999999"
+        Flags="NOT_ATTRACTED_BY_MAGNETS" 
+		RadiusDamageAffects="ALLIES NEUTRALS ENEMIES">
+		<Nuggets>
+			<FireOnObjectsNugget
+				Radius="100.0"
+				FireOnVictimObject="true"
+				Weapon="JapanEmperorsResolveWeapon_L1">
+				<Filter
+					Rule="ALL"
+					Exclude="STRUCTURE"
+					StatusBitFlagsExclude="SUBMERGED AIRBORNE_TARGET NOT_IN_WORLD"/>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- player power weapons for Emperor's Rage (resolve) level 2. -->
+	<WeaponTemplate
+		id="PlayerPowerJapanEmperorsResolveWeapon_L2"
+		AttackRange="999999"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RadiusDamageAffects="ALLIES NEUTRALS ENEMIES">
+        <Nuggets>
+            <FireOnObjectsNugget
+				Radius="150.0"
+				FireOnVictimObject="true"
+				Weapon="JapanEmperorsResolveWeapon_L2">
+                <Filter
+					Rule="ALL"
+					Exclude="STRUCTURE"
+					StatusBitFlagsExclude="SUBMERGED AIRBORNE_TARGET NOT_IN_WORLD"/>
+            </FireOnObjectsNugget>
+        </Nuggets>
+    </WeaponTemplate>
+
+    <!-- player power weapons for Emperor's Rage (resolve) level 3. -->
+	<WeaponTemplate
+		id="PlayerPowerJapanEmperorsResolveWeapon_L3"
+		AttackRange="999999"
+        Flags="NOT_ATTRACTED_BY_MAGNETS" 
+		RadiusDamageAffects="ALLIES NEUTRALS ENEMIES">
+		<Nuggets>
+			<FireOnObjectsNugget
+				Radius="200.0"
+				FireOnVictimObject="true"
+				Weapon="JapanEmperorsResolveWeapon_L3">
+				<Filter
+					Rule="ALL"
+					Exclude="STRUCTURE"
+					StatusBitFlagsExclude="SUBMERGED AIRBORNE_TARGET NOT_IN_WORLD"/>
+			</FireOnObjectsNugget>
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<!-- the weapon fired by a player to initially irratiate a target. -->
+	<WeaponTemplate
+		id="PlayerPowerIrradiateTargetWeapon"
+		AttackRange="999999"
+        Flags="NOT_ATTRACTED_BY_MAGNETS" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<TintObjectsNugget
+				PreColorTime="1s"
+				SustainedColorTime="99999999.0s"
+				PostColorTime="1s"
+				Frequency="0"
+				Amplitude="0">
+				<Color R="1.58" G="1.98" B="1.19" />
+			</TintObjectsNugget>
+			
+			<DOTNugget
+				id="DefaultDamageNugget"
+				Damage="10.0"
+				DamageInterval="0.1s"
+				DamageDuration="99999999s"
+				DamageType="RADIATION"
+				DamageFXType="RADIATION"
+				DeathType="IRRADIATED"
+				RemoveIfHealed="true">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY"
+					StatusBitFlagsExclude="AIRBORNE_TARGET" />
+			</DOTNugget>
+			
+			<ProjectileNugget
+				ProjectileTemplate="SovietRadiationDummyProjectile"
+				WarheadTemplate="PlayerPowerIrradiateTargetWeaponWarhead" />
+			
+			<WeaponOCLNugget
+				WeaponOCL="OCL_IrradiatedTargetSpawnedParasite"
+				TargetAsPrimaryObject="true" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="PlayerPowerIrradiateTargetWeaponWarhead"
+		AttackRange="999999"
+        Flags="NOT_ATTRACTED_BY_MAGNETS" 
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+        <Nuggets>
+			<DOTNugget
+				id="ExplosiveDamageNugget"
+				Damage="10.0"
+				DamageInterval="0.1s"
+				DamageDuration="99999999s"
+				DamageType="EXPLOSIVE"
+				DamageFXType="RADIATION"
+				DeathType="IRRADIATED"
+				RemoveIfHealed="true">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY"
+					StatusBitFlags="IRRADIATED"
+					StatusBitFlagsExclude="AIRBORNE_TARGET" />
+			</DOTNugget>
+        </Nuggets>
+    </WeaponTemplate>
+	
+    <!-- weapon fired repeatedly by the desolator field left when an irradiated (aka toxic corrosion) target is killed. -->
+    <WeaponTemplate
+		id="Weapon_IrradiatedTargetDieUpdate"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+		<Nuggets>
+			<TintObjectsNugget
+				Radius="80"
+				PreColorTime="1s"
+				SustainedColorTime="2s"
+				PostColorTime="1s"
+				Frequency="0"
+				Amplitude="0">
+				<Color R="1.58" G="1.98" B="1.19" />
+			</TintObjectsNugget>
+			
+			<DamageNugget
+				Damage="20"
+				Radius="80"
+				DamageType="RADIATION"
+				DamageFXType="RADIATION"
+				DeathType="IRRADIATED">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY"
+					StatusBitFlagsExclude="AIRBORNE_TARGET" />
+			</DamageNugget>
+			
+			<ProjectileNugget
+				ProjectileTemplate="SovietRadiationDummyProjectile"
+				WarheadTemplate="Weapon_IrradiatedTargetDieUpdateWarhead" />
+		</Nuggets>
+	</WeaponTemplate>
+	
+	<WeaponTemplate
+		id="Weapon_IrradiatedTargetDieUpdateWarhead"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+        <Nuggets>
+			<DamageNugget
+				Damage="20"
+				Radius="80"
+				DamageType="EXPLOSIVE"
+				DeathType="IRRADIATED"
+				DamageFXType="RADIATION">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY"
+					StatusBitFlags="IRRADIATED"
+					StatusBitFlagsExclude="AIRBORNE_TARGET" />
+			</DamageNugget>
+        </Nuggets>
+    </WeaponTemplate>
+	
+	<!-- field left by bombs dropped by the desolator bomber -->
+	<WeaponTemplate
+		id="Weapon_DesolatorBombFieldUpdate"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+        <Nuggets>
+            <TintObjectsNugget
+				Radius="150"
+				PreColorTime="1s"
+				SustainedColorTime="2s"
+				PostColorTime="1s"
+				Frequency="0"
+				Amplitude="0">
+                <Color R="1.58" G="1.98" B="1.19" />
+            </TintObjectsNugget>
+			
+			<DamageContainedNugget
+				MaxUnitsToDamage="1"
+				WindowBlastFX="FX_None"
+				Damage="10"
+				Radius="150"
+				DamageType="RADIATION"
+				DamageFXType="RADIATION"
+				DeathType="IRRADIATED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+			</DamageContainedNugget>
+			
+			<DamageNugget
+				Damage="20"
+				Radius="150"
+				DamageType="RADIATION"
+				DamageFXType="RADIATION"
+				DeathType="IRRADIATED">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY"
+					StatusBitFlagsExclude="AIRBORNE_TARGET" />
+			</DamageNugget>
+			
+			<ProjectileNugget
+				ProjectileTemplate="SovietRadiationDummyProjectile"
+				WarheadTemplate="Weapon_DesolatorBombFieldUpdateWarhead" />
+        </Nuggets>
+    </WeaponTemplate>
+	
+	<WeaponTemplate
+		id="Weapon_DesolatorBombFieldUpdateWarhead"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+        <Nuggets>
+			<DamageNugget
+				Damage="5.0"
+				Radius="150"
+				DamageType="EXPLOSIVE"
+				DeathType="IRRADIATED"
+				DamageFXType="RADIATION">
+				<SpecialObjectFilter
+					Rule="ANY"
+					Include="VEHICLE INFANTRY"
+					StatusBitFlags="IRRADIATED"
+					StatusBitFlagsExclude="AIRBORNE_TARGET" />
+			</DamageNugget>
+        </Nuggets>
+    </WeaponTemplate>
+	
+	<!-- this is fired whilst the vacuum effect is active -->
+	<WeaponTemplate
+ 		id="VacuumBombIncrementalWeapon"
+ 		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+        Flags="NOT_ATTRACTED_BY_MAGNETS" 
+ 		AttackRange="10000">
+ 		<Nuggets>
+ 			<DamageNugget
+				id="StructureDamageNugget"
+ 				Damage="45.0"
+ 				DamageTaperOff="15.0"
+ 				Radius="300.0"
+ 				DamageType="EXPLOSIVE"
+ 				DamageFXType="SOVIET_MAGNETICBOMB"
+ 				DeathType="DETONATED"
+ 				ForceFXPositionToVictim="true"
+ 				PartitionFilterTestType="CIRCLE"
+				NotifyObserversOnPreDamageEffectPosition="true"
+				RadiusAffectsBridges="true">
+ 				<SpecialObjectFilter
+ 					Rule="ANY"
+ 					Include="STRUCTURE">
+				</SpecialObjectFilter>
+ 			</DamageNugget>
+ 		</Nuggets>
+ 	</WeaponTemplate>
+</AssetDeclaration>
