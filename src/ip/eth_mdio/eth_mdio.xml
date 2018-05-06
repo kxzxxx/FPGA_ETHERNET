@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.05.11.17:59:38"
+ outputDirectory="C:/Android/EDA/DE2_GETH_UDP/src/ip/eth_mdio/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="Cyclone IV E"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="EP4CE115F29C7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="7"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLOCK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="clock" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="clk" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="clock_reset" kind="reset" start="0">
+   <property name="associatedClock" value="clock" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="reset" direction="input" role="reset" width="1" />
+  </interface>
+  <interface name="csr" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="256" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clock" />
+   <property name="associatedReset" value="clock_reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port name="csr_write" direction="input" role="write" width="1" />
+   <port name="csr_read" direction="input" role="read" width="1" />
+   <port name="csr_address" direction="input" role="address" width="6" />
+   <port name="csr_writedata" direction="input" role="writedata" width="32" />
+   <port name="csr_readdata" direction="output" role="readdata" width="32" />
+   <port
+       name="csr_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
+  </interface>
+  <interface name="mdio" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="mdc" direction="output" role="mdc" width="1" />
+   <port name="mdio_in" direction="input" role="mdio_in" width="1" />
+   <port name="mdio_out" direction="output" role="mdio_out" width="1" />
+   <port name="mdio_oen" direction="output" role="mdio_oen" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="eth_mdio:1.0:AUTO_CLOCK_CLOCK_DOMAIN=-1,AUTO_CLOCK_CLOCK_RATE=-1,AUTO_CLOCK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE115F29C7,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1526032777,AUTO_UNIQUE_ID=(altera_eth_mdio:18.0:MDC_DIVISOR=50)"
+   instancePathKey="eth_mdio"
+   kind="eth_mdio"
+   version="1.0"
+   name="eth_mdio">
+  <parameter name="AUTO_CLOCK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_CLOCK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLOCK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1526032777" />
+  <parameter name="AUTO_DEVICE" value="EP4CE115F29C7" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="7" />
+  <generatedFiles>
+   <file
+       path="C:/Android/EDA/DE2_GETH_UDP/src/ip/eth_mdio/synthesis/eth_mdio.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="C:/Android/EDA/DE2_GETH_UDP/src/ip/eth_mdio/synthesis/submodules/altera_eth_mdio.v"
+       type="VERILOG"
+       attributes="" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file path="C:/Android/EDA/DE2_GETH_UDP/src/ip/eth_mdio.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intel/intel_fpga/18.0/ip/altera/ethernet/ethernet_ucore/altera_eth_mdio/altera_eth_mdio_hw.tcl" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="eth_mdio">queue size: 0 starting:eth_mdio "eth_mdio"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="eth_mdio"><![CDATA["<b>eth_mdio</b>" reuses <b>altera_eth_mdio</b> "<b>submodules/altera_eth_mdio</b>"]]></message>
+   <message level="Debug" culprit="eth_mdio">queue size: 0 starting:altera_eth_mdio "submodules/altera_eth_mdio"</message>
+   <message level="Info" culprit="eth_mdio_0"><![CDATA["<b>eth_mdio</b>" instantiated <b>altera_eth_mdio</b> "<b>eth_mdio_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="altera_eth_mdio:18.0:MDC_DIVISOR=50"
+   instancePathKey="eth_mdio:.:eth_mdio_0"
+   kind="altera_eth_mdio"
+   version="18.0"
+   name="altera_eth_mdio">
+  <generatedFiles>
+   <file
+       path="C:/Android/EDA/DE2_GETH_UDP/src/ip/eth_mdio/synthesis/submodules/altera_eth_mdio.v"
+       type="VERILOG"
+       attributes="" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intel/intel_fpga/18.0/ip/altera/ethernet/ethernet_ucore/altera_eth_mdio/altera_eth_mdio_hw.tcl" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="eth_mdio" as="eth_mdio_0" />
+  <messages>
+   <message level="Debug" culprit="eth_mdio">queue size: 0 starting:altera_eth_mdio "submodules/altera_eth_mdio"</message>
+   <message level="Info" culprit="eth_mdio_0"><![CDATA["<b>eth_mdio</b>" instantiated <b>altera_eth_mdio</b> "<b>eth_mdio_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

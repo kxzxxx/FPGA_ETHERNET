@@ -1,0 +1,146 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+# Date created = 09:16:38  August 10, 2016
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Ethernet_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name TOP_LEVEL_ENTITY ethernet
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "11.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "09:16:38  AUGUST 10, 2016"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name CRC_ERROR_OPEN_DRAIN OFF
+set_global_assignment -name RESERVE_ALL_UNUSED_PINS_WEAK_PULLUP "AS INPUT TRI-STATED"
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "1.8 V"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name POWER_AUTO_COMPUTE_TJ ON
+
+set_global_assignment -name SAVE_DISK_SPACE OFF
+set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
+set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
+
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name OPTIMIZATION_MODE "HIGH PERFORMANCE EFFORT"
+set_location_assignment PIN_A15 -to rgmii_rx_clk
+set_location_assignment PIN_C16 -to rgmii_rx_data[0]
+set_location_assignment PIN_D16 -to rgmii_rx_data[1]
+set_location_assignment PIN_D17 -to rgmii_rx_data[2]
+set_location_assignment PIN_C15 -to rgmii_rx_data[3]
+set_location_assignment PIN_C17 -to rgmii_rx_dv
+set_location_assignment PIN_B17 -to rgmii_tx_clk
+set_location_assignment PIN_B19 -to rgmii_tx_data[3]
+set_location_assignment PIN_A19 -to rgmii_tx_data[2]
+set_location_assignment PIN_D19 -to rgmii_tx_data[1]
+set_location_assignment PIN_C18 -to rgmii_tx_data[0]
+set_location_assignment PIN_A18 -to rgmii_tx_en
+set_location_assignment PIN_M23 -to rst_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_rx_clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_rx_data[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_rx_data[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_rx_data[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_rx_dv
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_tx_clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_tx_data[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_tx_data[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_tx_data[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_tx_en
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rst_n
+set_instance_assignment -name SLEW_RATE 2 -to rgmii_tx_clk
+set_instance_assignment -name SLEW_RATE 2 -to rgmii_tx_data[3]
+set_instance_assignment -name SLEW_RATE 2 -to rgmii_tx_data[1]
+set_instance_assignment -name SLEW_RATE 2 -to rgmii_tx_en
+set_instance_assignment -name SLEW_RATE 2 -to rgmii_tx_data[0]
+set_instance_assignment -name SLEW_RATE 2 -to rgmii_tx_data[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_rx_data[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to rgmii_tx_data[1]
+set_location_assignment PIN_A17 -to e_gtxc
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to e_gtxc
+set_instance_assignment -name SLEW_RATE 2 -to e_gtxc
+set_global_assignment -name QSYS_FILE src/ip/eth_mdio.qsys
+set_global_assignment -name QIP_FILE src/ip/ram_2p.qip
+set_global_assignment -name VERILOG_FILE src/util_gmii_to_rgmii.v
+set_global_assignment -name VERILOG_FILE src/ethernet.v -hdl_version Verilog_2001
+set_global_assignment -name SDC_FILE Ethernet.out.sdc
+set_global_assignment -name VERILOG_FILE Src/udp.v
+set_global_assignment -name VERILOG_FILE Src/ipsend.v
+set_global_assignment -name VERILOG_FILE Src/iprecieve.v
+set_global_assignment -name VERILOG_FILE Src/crc.v
+set_global_assignment -name SIGNALTAP_FILE stp1.stp
+set_global_assignment -name QIP_FILE src/ip/ddio_in_1bit.qip
+set_global_assignment -name QIP_FILE src/ip/ddio_in_4bit.qip
+set_global_assignment -name QIP_FILE src/ip/ddio_out_1bit.qip
+set_global_assignment -name QIP_FILE src/ip/ddio_out_4bit.qip
+set_global_assignment -name IGNORE_PARTITIONS ON
+set_location_assignment PIN_B21 -to e_mdio
+set_location_assignment PIN_C20 -to e_mdc
+set_instance_assignment -name IO_STANDARD "2.5 V" -to e_mdc
+set_instance_assignment -name IO_STANDARD "2.5 V" -to e_mdio
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_tx_en
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_tx_data[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_rx_clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to e_mdc
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to e_mdio
+set_instance_assignment -name SLEW_RATE 2 -to e_mdio
+set_instance_assignment -name SLEW_RATE 2 -to e_mdc
+set_instance_assignment -name IO_STANDARD "2.5 V" -to e_gtxc
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_rx_data[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_tx_data[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_tx_data[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_tx_data[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_tx_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_rx_dv
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_rx_data[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_rx_data[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to rgmii_rx_data[3]
+set_location_assignment PIN_Y2 -to clk_50
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk_50
+set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to clk_50
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

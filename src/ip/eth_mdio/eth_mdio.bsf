@@ -1,0 +1,145 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 288 352)
+	(text "eth_mdio" (rect 118 -1 154 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 336 20 348)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk" (rect 0 0 10 12)(font "Arial" (font_size 8)))
+		(text "clk" (rect 4 61 22 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 112 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset" (rect 0 0 20 12)(font "Arial" (font_size 8)))
+		(text "reset" (rect 4 101 34 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 112 112)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "csr_write" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "csr_write" (rect 4 141 58 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 112 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "csr_read" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "csr_read" (rect 4 157 52 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 112 168)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(input)
+		(text "csr_address[5..0]" (rect 0 0 70 12)(font "Arial" (font_size 8)))
+		(text "csr_address[5..0]" (rect 4 173 106 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 112 184)(line_width 3))
+	)
+	(port
+		(pt 0 200)
+		(input)
+		(text "csr_writedata[31..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "csr_writedata[31..0]" (rect 4 189 124 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 112 200)(line_width 3))
+	)
+	(port
+		(pt 0 288)
+		(input)
+		(text "mdio_in" (rect 0 0 30 12)(font "Arial" (font_size 8)))
+		(text "mdio_in" (rect 4 277 46 288)(font "Arial" (font_size 8)))
+		(line (pt 0 288)(pt 112 288)(line_width 1))
+	)
+	(port
+		(pt 0 216)
+		(output)
+		(text "csr_readdata[31..0]" (rect 0 0 76 12)(font "Arial" (font_size 8)))
+		(text "csr_readdata[31..0]" (rect 4 205 118 216)(font "Arial" (font_size 8)))
+		(line (pt 0 216)(pt 112 216)(line_width 3))
+	)
+	(port
+		(pt 0 232)
+		(output)
+		(text "csr_waitrequest" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "csr_waitrequest" (rect 4 221 94 232)(font "Arial" (font_size 8)))
+		(line (pt 0 232)(pt 112 232)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(output)
+		(text "mdc" (rect 0 0 17 12)(font "Arial" (font_size 8)))
+		(text "mdc" (rect 4 261 22 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 112 272)(line_width 1))
+	)
+	(port
+		(pt 0 304)
+		(output)
+		(text "mdio_out" (rect 0 0 36 12)(font "Arial" (font_size 8)))
+		(text "mdio_out" (rect 4 293 52 304)(font "Arial" (font_size 8)))
+		(line (pt 0 304)(pt 112 304)(line_width 1))
+	)
+	(port
+		(pt 0 320)
+		(output)
+		(text "mdio_oen" (rect 0 0 38 12)(font "Arial" (font_size 8)))
+		(text "mdio_oen" (rect 4 309 52 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 112 320)(line_width 1))
+	)
+	(drawing
+		(text "clock" (rect 84 43 198 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 117 67 252 144)(font "Arial" (color 0 0 0)))
+		(text "clock_reset" (rect 46 83 158 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset" (rect 117 107 264 224)(font "Arial" (color 0 0 0)))
+		(text "csr" (rect 95 123 208 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "write" (rect 117 147 264 304)(font "Arial" (color 0 0 0)))
+		(text "read" (rect 117 163 258 336)(font "Arial" (color 0 0 0)))
+		(text "address" (rect 117 179 276 368)(font "Arial" (color 0 0 0)))
+		(text "writedata" (rect 117 195 288 400)(font "Arial" (color 0 0 0)))
+		(text "readdata" (rect 117 211 282 432)(font "Arial" (color 0 0 0)))
+		(text "waitrequest" (rect 117 227 300 464)(font "Arial" (color 0 0 0)))
+		(text "mdio" (rect 85 243 194 499)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "mdc" (rect 117 267 252 544)(font "Arial" (color 0 0 0)))
+		(text "mdio_in" (rect 117 283 276 576)(font "Arial" (color 0 0 0)))
+		(text "mdio_out" (rect 117 299 282 608)(font "Arial" (color 0 0 0)))
+		(text "mdio_oen" (rect 117 315 282 640)(font "Arial" (color 0 0 0)))
+		(text " system " (rect 253 336 554 682)(font "Arial" ))
+		(line (pt 112 32)(pt 176 32)(line_width 1))
+		(line (pt 176 32)(pt 176 336)(line_width 1))
+		(line (pt 112 336)(pt 176 336)(line_width 1))
+		(line (pt 112 32)(pt 112 336)(line_width 1))
+		(line (pt 113 52)(pt 113 76)(line_width 1))
+		(line (pt 114 52)(pt 114 76)(line_width 1))
+		(line (pt 113 92)(pt 113 116)(line_width 1))
+		(line (pt 114 92)(pt 114 116)(line_width 1))
+		(line (pt 113 132)(pt 113 236)(line_width 1))
+		(line (pt 114 132)(pt 114 236)(line_width 1))
+		(line (pt 113 252)(pt 113 324)(line_width 1))
+		(line (pt 114 252)(pt 114 324)(line_width 1))
+		(line (pt 0 0)(pt 288 0)(line_width 1))
+		(line (pt 288 0)(pt 288 352)(line_width 1))
+		(line (pt 0 352)(pt 288 352)(line_width 1))
+		(line (pt 0 0)(pt 0 352)(line_width 1))
+	)
+)

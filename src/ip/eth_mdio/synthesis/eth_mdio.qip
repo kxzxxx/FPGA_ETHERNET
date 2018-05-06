@@ -1,0 +1,39 @@
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_TOOL_VERSION "18.0"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "eth_mdio" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../eth_mdio.sopcinfo"]
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name SLD_INFO "QSYS_NAME eth_mdio HAS_SOPCINFO 1 GENERATION_ID 1526032777"
+set_global_assignment -library "eth_mdio" -name MISC_FILE [file join $::quartus(qip_path) "../eth_mdio.cmp"]
+set_global_assignment -library "eth_mdio" -name SLD_FILE [file join $::quartus(qip_path) "eth_mdio.debuginfo"]
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_TARGETED_DEVICE_FAMILY "Cyclone IV E"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone IV E}"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "eth_mdio" -name MISC_FILE [file join $::quartus(qip_path) "../../eth_mdio.qsys"]
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_NAME "ZXRoX21kaW8="
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_DISPLAY_NAME "ZXRoX21kaW8="
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUyNjAzMjc3Nw==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBJViBF::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::RVA0Q0UxMTVGMjlDNw==::QXV0byBERVZJQ0U="
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19SQVRF::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19DTE9DS19ET01BSU4=::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "QVVUT19DTE9DS19SRVNFVF9ET01BSU4=::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_NAME "YWx0ZXJhX2V0aF9tZGlv"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_DISPLAY_NAME "RXRoZXJuZXQgTURJTyBJbnRlbCBGUEdBIElQ"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_VERSION "MTguMA=="
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_DESCRIPTION "QWx0ZXJhIEV0aGVybmV0IE1ESU8="
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_COMPONENT_PARAMETER "TURDX0RJVklTT1I=::NTA=::TURDX0RJVklTT1I="
+
+set_global_assignment -library "eth_mdio" -name VERILOG_FILE [file join $::quartus(qip_path) "eth_mdio.v"]
+set_global_assignment -library "eth_mdio" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_eth_mdio.v"]
+
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_TOOL_NAME "altera_eth_mdio"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_TOOL_VERSION "18.0"
+set_global_assignment -entity "altera_eth_mdio" -library "eth_mdio" -name IP_TOOL_ENV "Qsys"
