@@ -1,0 +1,225 @@
+CMD: quartus_sh -t c:/intel/intel_fpga/18.0/quartus//common/tcl/internal/ip_migrate.tcl "ram_2port" "RAM:2-PORT v18.0" "c:/intel/intel_fpga/18.0/ip//altera/megafunctions/ram_2port" "migration_map.csv" "C:/Android/EDA/AC6102_GETH_sgmii/src/ip//ram_2p.v" "0" "ADDRESS_ACLR_B=NONE;ADDRESS_REG_B=CLOCK0;CLOCK_ENABLE_INPUT_A=BYPASS;CLOCK_ENABLE_INPUT_B=BYPASS;CLOCK_ENABLE_OUTPUT_B=BYPASS;INTENDED_DEVICE_FAMILY=Arria 10;LPM_TYPE=altera_syncram;NUMWORDS_A=512;NUMWORDS_B=512;OPERATION_MODE=DUAL_PORT;OUTDATA_ACLR_B=NONE;OUTDATA_REG_B=CLOCK0;POWER_UP_UNINITIALIZED=FALSE;READ_DURING_WRITE_MODE_MIXED_PORTS=OLD_DATA;WIDTHAD_A=9;WIDTHAD_B=9;WIDTH_A=32;WIDTH_B=32;WIDTH_BYTEENA_A=1;ADDRESSSTALL_A=0;ADDRESSSTALL_B=0;BYTEENA_ACLR_A=0;BYTEENA_ACLR_B=0;BYTE_ENABLE_A=0;BYTE_ENABLE_B=0;BYTE_SIZE=8;BlankMemory=1;CLOCK_ENABLE_INPUT_A=0;CLOCK_ENABLE_INPUT_B=0;CLOCK_ENABLE_OUTPUT_A=0;CLOCK_ENABLE_OUTPUT_B=0;CLRdata=0;CLRq=0;CLRrdaddress=0;CLRrren=0;CLRwraddress=0;CLRwren=0;Clock=0;Clock_A=0;Clock_B=0;IMPLEMENT_IN_LES=0;INDATA_ACLR_B=0;INDATA_REG_B=0;INIT_FILE_LAYOUT=PORT_B;INIT_TO_SIM_X=0;INTENDED_DEVICE_FAMILY=Arria 10;JTAG_ENABLED=0;JTAG_ID=NONE;MAXIMUM_DEPTH=0;MEMSIZE=16384;MEM_IN_BITS=1;MIFfilename=;NUMWORDS_A=32;OPERATION_MODE=2;OUTDATA_ACLR_B=0;OUTDATA_REG_B=1;RAM_BLOCK_TYPE=0;READ_DURING_WRITE_MODE_MIXED_PORTS=1;READ_DURING_WRITE_MODE_PORT_A=3;READ_DURING_WRITE_MODE_PORT_B=3;REGdata=1;REGq=1;REGrdaddress=1;REGrren=1;REGwraddress=1;REGwren=1;SYNTH_WRAPPER_GEN_POSTFIX=0;SingleClock=1;USE_DIFF_CLKEN=0;UseDPRAM=1;UseDQRAM=0;VarWidth=0;WIDTH_READ_A=32;WIDTH_READ_B=32;WIDTH_WRITE_A=32;WIDTH_WRITE_B=32;WRADDR_ACLR_B=0;WRADDR_REG_B=0;WRCTRL_ACLR_B=0;WidthAddr=8;WidthData=8;enable=0;rden=0;USED_PORT_address=true;USED_PORT_clock=true;USED_PORT_data=true;USED_PORT_q=true;USED_PORT_rdaddress=true;USED_PORT_wraddress=true;USED_PORT_wren=true;"
+
+INFO: Old IP param ADDRESS_ACLR_B <= NONE
+INFO: Old IP param ADDRESS_REG_B <= CLOCK0
+INFO: Old IP param CLOCK_ENABLE_INPUT_A <= BYPASS
+INFO: Old IP param CLOCK_ENABLE_INPUT_B <= BYPASS
+INFO: Old IP param CLOCK_ENABLE_OUTPUT_B <= BYPASS
+INFO: Old IP param INTENDED_DEVICE_FAMILY <= Arria 10
+INFO: Old IP param LPM_TYPE <= altera_syncram
+INFO: Old IP param NUMWORDS_A <= 512
+INFO: Old IP param NUMWORDS_B <= 512
+INFO: Old IP param OPERATION_MODE <= DUAL_PORT
+INFO: Old IP param OUTDATA_ACLR_B <= NONE
+INFO: Old IP param OUTDATA_REG_B <= CLOCK0
+INFO: Old IP param POWER_UP_UNINITIALIZED <= FALSE
+INFO: Old IP param READ_DURING_WRITE_MODE_MIXED_PORTS <= OLD_DATA
+INFO: Old IP param WIDTHAD_A <= 9
+INFO: Old IP param WIDTHAD_B <= 9
+INFO: Old IP param WIDTH_A <= 32
+INFO: Old IP param WIDTH_B <= 32
+INFO: Old IP param WIDTH_BYTEENA_A <= 1
+INFO: Old IP param ADDRESSSTALL_A <= 0
+INFO: Old IP param ADDRESSSTALL_B <= 0
+INFO: Old IP param BYTEENA_ACLR_A <= 0
+INFO: Old IP param BYTEENA_ACLR_B <= 0
+INFO: Old IP param BYTE_ENABLE_A <= 0
+INFO: Old IP param BYTE_ENABLE_B <= 0
+INFO: Old IP param BYTE_SIZE <= 8
+INFO: Old IP param BlankMemory <= 1
+INFO: Old IP param CLOCK_ENABLE_INPUT_A <= 0
+INFO: Old IP param CLOCK_ENABLE_INPUT_B <= 0
+INFO: Old IP param CLOCK_ENABLE_OUTPUT_A <= 0
+INFO: Old IP param CLOCK_ENABLE_OUTPUT_B <= 0
+INFO: Old IP param CLRdata <= 0
+INFO: Old IP param CLRq <= 0
+INFO: Old IP param CLRrdaddress <= 0
+INFO: Old IP param CLRrren <= 0
+INFO: Old IP param CLRwraddress <= 0
+INFO: Old IP param CLRwren <= 0
+INFO: Old IP param Clock <= 0
+INFO: Old IP param Clock_A <= 0
+INFO: Old IP param Clock_B <= 0
+INFO: Old IP param IMPLEMENT_IN_LES <= 0
+INFO: Old IP param INDATA_ACLR_B <= 0
+INFO: Old IP param INDATA_REG_B <= 0
+INFO: Old IP param INIT_FILE_LAYOUT <= PORT_B
+INFO: Old IP param INIT_TO_SIM_X <= 0
+INFO: Old IP param INTENDED_DEVICE_FAMILY <= Arria 10
+INFO: Old IP param JTAG_ENABLED <= 0
+INFO: Old IP param JTAG_ID <= NONE
+INFO: Old IP param MAXIMUM_DEPTH <= 0
+INFO: Old IP param MEMSIZE <= 16384
+INFO: Old IP param MEM_IN_BITS <= 1
+INFO: Old IP param MIFfilename <= 
+INFO: Old IP param NUMWORDS_A <= 32
+INFO: Old IP param OPERATION_MODE <= 2
+INFO: Old IP param OUTDATA_ACLR_B <= 0
+INFO: Old IP param OUTDATA_REG_B <= 1
+INFO: Old IP param RAM_BLOCK_TYPE <= 0
+INFO: Old IP param READ_DURING_WRITE_MODE_MIXED_PORTS <= 1
+INFO: Old IP param READ_DURING_WRITE_MODE_PORT_A <= 3
+INFO: Old IP param READ_DURING_WRITE_MODE_PORT_B <= 3
+INFO: Old IP param REGdata <= 1
+INFO: Old IP param REGq <= 1
+INFO: Old IP param REGrdaddress <= 1
+INFO: Old IP param REGrren <= 1
+INFO: Old IP param REGwraddress <= 1
+INFO: Old IP param REGwren <= 1
+INFO: Old IP param SYNTH_WRAPPER_GEN_POSTFIX <= 0
+INFO: Old IP param SingleClock <= 1
+INFO: Old IP param USE_DIFF_CLKEN <= 0
+INFO: Old IP param UseDPRAM <= 1
+INFO: Old IP param UseDQRAM <= 0
+INFO: Old IP param VarWidth <= 0
+INFO: Old IP param WIDTH_READ_A <= 32
+INFO: Old IP param WIDTH_READ_B <= 32
+INFO: Old IP param WIDTH_WRITE_A <= 32
+INFO: Old IP param WIDTH_WRITE_B <= 32
+INFO: Old IP param WRADDR_ACLR_B <= 0
+INFO: Old IP param WRADDR_REG_B <= 0
+INFO: Old IP param WRCTRL_ACLR_B <= 0
+INFO: Old IP param WidthAddr <= 8
+INFO: Old IP param WidthData <= 8
+INFO: Old IP param enable <= 0
+INFO: Old IP param rden <= 0
+INFO: Old IP param USED_PORT_address <= true
+INFO: Old IP param USED_PORT_clock <= true
+INFO: Old IP param USED_PORT_data <= true
+INFO: Old IP param USED_PORT_q <= true
+INFO: Old IP param USED_PORT_rdaddress <= true
+INFO: Old IP param USED_PORT_wraddress <= true
+INFO: Old IP param USED_PORT_wren <= true
+INFO: Configuring new IP...
+INFO: New IP param DEVICE_FAMILY => Arria 10
+Evaluating [get_old_param OPERATION_MODE] == 3 ==> 0
+Evaluating [get_old_param OPERATION_MODE] == 2 ==> 1
+INFO: New IP param GUI_MODE => 0
+INFO: New IP param GUI_MEM_IN_BITS => 1
+Evaluating [get_old_param MEM_IN_BITS] == 1 ==> 1
+INFO: New IP param GUI_MEMSIZE_BITS => 16384
+Evaluating [get_old_param MEM_IN_BITS] == 0 ==> 0
+INFO: New IP param GUI_QA_WIDTH => 32
+INFO: New IP param GUI_QB_WIDTH => 32
+INFO: New IP param GUI_DATAA_WIDTH => 32
+Evaluating [get_old_param MAXIMUM_DEPTH] == 0 ==> 1
+INFO: New IP param GUI_MAX_DEPTH => Auto
+Evaluating [get_old_param MAXIMUM_DEPTH] != 0 ==> 0
+INFO: New IP param GUI_VAR_WIDTH => 0
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 0 ==> 1
+INFO: New IP param GUI_RAM_BLOCK_TYPE => Auto
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 1 ==> 0
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 2 && [string equal [get_old_param INTENDED_DEVICE_FAMILY] "Arria 10"] ==> 0
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 2 && ![string equal [get_old_param INTENDED_DEVICE_FAMILY] "Arria 10"] ==> 0
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 3 ==> 0
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 5 ==> 0
+INFO: New IP param GUI_LC_IMPLEMENTION_OPTIONS => 0
+Evaluating [get_old_param Clock] != 5 ==> 1
+INFO: New IP param GUI_CLOCK_TYPE => 0
+Evaluating [get_old_param Clock] == 5 ==> 0
+INFO: New IP param GUI_RDEN_SINGLE => 0
+INFO: New IP param GUI_RDEN_DOUBLE => 0
+INFO: New IP param GUI_BYTE_ENABLE_A => 0
+INFO: New IP param GUI_BYTE_ENABLE_B => 0
+Evaluating [exists_old_param ECC_DOUBLE] ==> 0
+Evaluating [exists_old_param ECC_TRIPLE] ==> 0
+Evaluating [exists_old_param ECC_PIPELINE] ==> 0
+INFO: New IP param GUI_BYTE_ENABLE_WIDTH => 8
+INFO: Ignoring GUI_WRITE_INPUT_PORTS
+Evaluating [get_old_param RAM_BLOCK_TYPE] == 1 ==> 0
+Evaluating [get_old_param RAM_BLOCK_TYPE] != 1 ==> 1
+INFO: New IP param GUI_READ_INPUT_RDADDRESS => 1
+INFO: New IP param GUI_READ_OUTPUT_QA => 1
+INFO: New IP param GUI_READ_OUTPUT_QB => 1
+INFO: New IP param GUI_DIFFERENT_CLKENS => 0
+INFO: New IP param GUI_CLKEN_WRITE_INPUT_REG => 0
+INFO: New IP param GUI_CLKEN_READ_INPUT_REG => 0
+Evaluating [get_old_param OUTDATA_REG_B] == "0" ==> 0
+Evaluating [get_old_param OUTDATA_REG_B] == "1" && [get_old_param CLOCK_ENABLE_OUTPUT_B] == "1" ==> 0
+INFO: New IP param GUI_CLKEN_INPUT_REG_A => 0
+INFO: New IP param GUI_CLKEN_INPUT_REG_B => 0
+Evaluating [exists_old_param OUTDATA_REG_A] && [get_old_param OUTDATA_REG_A] != "UNREGISTERED" ==> 0
+Evaluating [exists_old_param OUTDATA_REG_A] && [get_old_param OUTDATA_REG_A] == "UNREGISTERED" ==> 0
+Evaluating [exists_old_param OUTDATA_REG_B] && [get_old_param OUTDATA_REG_B] != "0" ==> 1
+INFO: New IP param GUI_CLKEN_OUTPUT_REG_B => 0
+Evaluating [exists_old_param OUTDATA_REG_B] && [get_old_param OUTDATA_REG_B] == "0" ==> 0
+INFO: New IP param GUI_CLKEN_ADDRESS_STALL_A => 0
+INFO: New IP param GUI_CLKEN_ADDRESS_STALL_B => 0
+INFO: New IP param GUI_CLKEN_WRADDRESSSTALL => 0
+INFO: New IP param GUI_CLKEN_RDADDRESSSTALL => 0
+INFO: New IP param GUI_ACLR_READ_INPUT_RDADDRESS => 0
+INFO: New IP param GUI_ACLR_READ_OUTPUT_QA => 0
+INFO: New IP param GUI_ACLR_READ_OUTPUT_QB => 0
+Evaluating [get_old_param READ_DURING_WRITE_MODE_MIXED_PORTS] != 4 ==> 1
+INFO: New IP param GUI_Q_PORT_MODE => 1
+Evaluating [get_old_param READ_DURING_WRITE_MODE_MIXED_PORTS] == 4 ==> 0
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_A] == 1 ==> 0
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_B] == 1 ==> 0
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_A] == 3 ==> 1
+INFO: New IP param GUI_RDW_A_MODE => New Data
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_B] == 3 ==> 1
+INFO: New IP param GUI_RDW_B_MODE => New Data
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_A] == 4 ==> 0
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_B] == 4 ==> 0
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_A] == 3 ==> 1
+INFO: New IP param GUI_NBE_A => TRUE
+Evaluating [get_old_param READ_DURING_WRITE_MODE_PORT_B] == 3 ==> 1
+INFO: New IP param GUI_NBE_B => TRUE
+Evaluating [exists_old_param BlankMemory] && [get_old_param BlankMemory] == 0 ==> 0
+Evaluating [exists_old_param BlankMemory] && [get_old_param BlankMemory] == 1 ==> 1
+INFO: New IP param GUI_BLANK_MEMORY => 0
+Evaluating [exists_old_param BlankMemory] && [get_old_param BlankMemory] == 0 && [get_old_param MIFfilename] != "" ==> 0
+Evaluating [exists_old_param INIT_FILE_LAYOUT] ==> 1
+INFO: New IP param GUI_INIT_FILE_LAYOUT => PORT_B
+INFO: New IP param GUI_INIT_SIM_TO_X => 0
+INFO: Ignoring GUI_MIF_FILENAME
+INFO: Ignoring GUI_BYTE_WIDTH
+INFO: Ignoring GUI_MODULE_NAME
+INFO: Ignoring GUI_DATA_WIDTH
+INFO: Ignoring GUI_Q_WIDTH
+INFO: Ignoring GUI_WRADDRESS_WIDTH
+INFO: Ignoring GUI_RDADDRESS_WIDTH
+INFO: Ignoring GUI_WIDTH_ECCSTATUS
+INFO: Ignoring GUI_NUMWORDS_A
+INFO: Ignoring GUI_NUMWORDS_B
+Writing C:/Android/EDA/AC6102_GETH_sgmii/src/ip/ram_2p_convert_to_qsys_variant.tcl...
+Running {C:\Intel\Intel_FPGA\18.0\quartus\sopc_builder\bin/qsys-script} --script=C:/Android/EDA/AC6102_GETH_sgmii/src/ip/ram_2p_convert_to_qsys_variant.tcl
+Running {C:\Intel\Intel_FPGA\18.0\quartus\sopc_builder\bin/qsys-edit} --require-generation C:/Android/EDA/AC6102_GETH_sgmii/src/ip/ram_2p.qsys
+WARNING: New IP Parameter has GUI_ACLR_READ_INPUT_RDADDRESS set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_ACLR_READ_OUTPUT_QA set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_ACLR_READ_OUTPUT_QB set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_BYTE_ENABLE_A set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_BYTE_ENABLE_B set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_ADDRESS_STALL_A set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_ADDRESS_STALL_B set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_INPUT_REG_A set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_INPUT_REG_B set to false! Expecting 0!
+WARNING: New IP Parameter not set by ip_migrate: GUI_CLKEN_OUTPUT_REG_A
+WARNING: New IP Parameter has GUI_CLKEN_OUTPUT_REG_B set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_RDADDRESSSTALL set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_READ_INPUT_REG set to false! Expecting 0!
+WARNING: New IP Parameter not set by ip_migrate: GUI_CLKEN_READ_OUTPUT_REG
+WARNING: New IP Parameter has GUI_CLKEN_WRADDRESSSTALL set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_CLKEN_WRITE_INPUT_REG set to false! Expecting 0!
+WARNING: New IP Parameter not set by ip_migrate: GUI_COHERENT_READ
+WARNING: New IP Parameter not set by ip_migrate: GUI_CONSTRAINED_DONT_CARE
+WARNING: New IP Parameter has GUI_DIFFERENT_CLKENS set to false! Expecting 0!
+WARNING: New IP Parameter not set by ip_migrate: GUI_ECCENCBYPASS
+WARNING: New IP Parameter not set by ip_migrate: GUI_ECC_DOUBLE
+WARNING: New IP Parameter not set by ip_migrate: GUI_ECC_PIPELINE
+WARNING: New IP Parameter not set by ip_migrate: GUI_ECC_TRIPLE
+WARNING: New IP Parameter not set by ip_migrate: GUI_FILE_REFERENCE
+WARNING: New IP Parameter not set by ip_migrate: GUI_FORCE_TO_ZERO
+WARNING: New IP Parameter has GUI_INIT_SIM_TO_X set to false! Expecting 0!
+WARNING: New IP Parameter not set by ip_migrate: GUI_MEMSIZE_WORDS
+WARNING: New IP Parameter has GUI_RDEN_DOUBLE set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_RDEN_SINGLE set to false! Expecting 0!
+WARNING: New IP Parameter has GUI_READ_INPUT_RDADDRESS set to true! Expecting 1!
+WARNING: New IP Parameter has GUI_READ_OUTPUT_QA set to true! Expecting 1!
+WARNING: New IP Parameter has GUI_READ_OUTPUT_QB set to true! Expecting 1!
+WARNING: New IP Parameter not set by ip_migrate: GUI_SCLR_READ_OUTPUT_QA
+WARNING: New IP Parameter not set by ip_migrate: GUI_SCLR_READ_OUTPUT_QB
+WARNING: New IP Parameter not set by ip_migrate: GUI_TBENCH
+WARNING: New IP Parameter has GUI_VAR_WIDTH set to false! Expecting 0!
+WARNING: New IP Parameter not set by ip_migrate: GUI_WIDTH_ECCENCPARITY
+IP Migration completed successfully!

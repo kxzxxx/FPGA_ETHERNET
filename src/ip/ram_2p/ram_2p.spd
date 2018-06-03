@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="ram_2port_180/sim/ram_2p_ram_2port_180_phloncy.v"
+   type="VERILOG"
+   library="ram_2port_180" />
+ <file
+   path="sim/ram_2p.v"
+   type="VERILOG"
+   library="ram_2p"
+   hasInlineConfiguration="true" />
+ <topLevel name="ram_2p.ram_2p" />
+ <deviceFamily name="arria10" />
+</simPackage>

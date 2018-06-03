@@ -1,0 +1,18 @@
+# system info ram_2p on 2018.06.04.02:06:18
+system_info:
+name,value
+DEVICE,10AX115S2F45I1SG
+DEVICE_FAMILY,Arria 10
+GENERATION_ID,0
+#
+#
+# Files generated for ram_2p on 2018.06.04.02:06:18
+files:
+filepath,kind,attributes,module,is_top
+sim/ram_2p.v,VERILOG,CONTAINS_INLINE_CONFIGURATION,ram_2p,true
+ram_2port_180/sim/ram_2p_ram_2port_180_phloncy.v,VERILOG,,ram_2p_ram_2port_180_phloncy,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+ram_2p.ram_2p,ram_2p_ram_2port_180_phloncy

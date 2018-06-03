@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="eth_tse_0"
+ megafunction_name="ALTERA_ETH_TSE"
+ intended_family="Arria 10"
+ specifies="all_ports">
+ <global>
+  <pin name="reg_addr[4..0]" direction="input" scope="external" />
+  <pin name="reg_data_out[15..0]" direction="output" scope="external" />
+  <pin name="reg_rd" direction="input" scope="external" />
+  <pin name="reg_data_in[15..0]" direction="input" scope="external" />
+  <pin name="reg_wr" direction="input" scope="external" />
+  <pin name="reg_busy" direction="output" scope="external" />
+  <pin name="clk" direction="input" scope="external" />
+  <pin name="gmii_rx_dv" direction="output" scope="external" />
+  <pin name="gmii_rx_d[7..0]" direction="output" scope="external" />
+  <pin name="gmii_rx_err" direction="output" scope="external" />
+  <pin name="gmii_tx_en" direction="input" scope="external" />
+  <pin name="gmii_tx_d[7..0]" direction="input" scope="external" />
+  <pin name="gmii_tx_err" direction="input" scope="external" />
+  <pin name="rx_clk" direction="output" scope="external" />
+  <pin name="reset_rx_clk" direction="input" scope="external" />
+  <pin name="ref_clk" direction="input" scope="external" />
+  <pin name="tx_clk" direction="output" scope="external" />
+  <pin name="reset_tx_clk" direction="input" scope="external" />
+  <pin name="reset" direction="input" scope="external" />
+  <pin name="rx_recovclkout" direction="output" scope="external" />
+  <pin name="rxp" direction="input" scope="external" />
+  <pin name="txp" direction="output" scope="external" />
+  <pin name="led_crs" direction="output" scope="external" />
+  <pin name="led_link" direction="output" scope="external" />
+  <pin name="led_panel_link" direction="output" scope="external" />
+  <pin name="led_col" direction="output" scope="external" />
+  <pin name="led_an" direction="output" scope="external" />
+  <pin name="led_char_err" direction="output" scope="external" />
+  <pin name="led_disp_err" direction="output" scope="external" />
+ </global>
+</pinplan>
